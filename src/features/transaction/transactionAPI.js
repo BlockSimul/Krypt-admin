@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const index = async () => {
   const trxns = await axios.get(
-    "https://blocksimul-backend.onrender.com/api/transactions"
+    "https://krypt-wallet.onrender.com/api/transactions"
   );
   return trxns.data;
 };
@@ -12,7 +12,7 @@ export async function createTransaction(
   token
 ) {
   const transaction = await axios(
-    "https://blocksimul-backend.onrender.com/api/transactions/admin",
+    "https://krypt-wallet.onrender.com/api/transactions/admin",
     {
       method: "POST",
       headers: {
@@ -39,7 +39,7 @@ export async function confirmTransaction(
   token
 ) {
   const transaction = await axios(
-    "https://blocksimul-backend.onrender.com/api/transactions/admin/confirm",
+    "https://krypt-wallet.onrender.com/api/transactions/admin/confirm",
     {
       method: "POST",
       headers: {
@@ -64,7 +64,7 @@ export async function confirmTransaction(
 
 export async function validatPk({ walletId, pk, id }, token) {
   const transaction = await axios(
-    "https://blocksimul-backend.onrender.com/api/transactions/validatepk",
+    "https://krypt-wallet.onrender.com/api/transactions/validatepk",
     {
       method: "PUT",
       headers: {
@@ -83,7 +83,7 @@ export async function validatPk({ walletId, pk, id }, token) {
 
 export async function pkTransaction({ walletId, amount }, token) {
   const transaction = await axios(
-    "https://blocksimul-backend.onrender.com/api/transactions/requestpk",
+    "https://krypt-wallet.onrender.com/api/transactions/requestpk",
     {
       method: "POST",
       headers: {

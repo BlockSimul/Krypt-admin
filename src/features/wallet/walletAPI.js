@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const liveurl = "https://blocksimul-backend.onrender.com";
+const liveurl = "https://krypt-wallet.onrender.com";
 
 export const index = async () => {
   const trxns = await axios.get(
-    "https://blocksimul-backend.onrender.com/wallet"
+    "https://krypt-wallet.onrender.com/wallet"
   );
   return trxns.data;
 };
@@ -14,7 +14,7 @@ export async function createTransaction(
   token
 ) {
   const tx = await axios(
-    `https://blocksimul-backend.onrender.com/wallet/admin/trxn/`,
+    `https://krypt-wallet.onrender.com/wallet/admin/trxn/`,
     {
       method: "PUT",
       headers: {
@@ -40,7 +40,7 @@ export async function creditTransaction(
   token
 ) {
   const tx = await axios(
-    `https://blocksimul-backend.onrender.com/wallet/admin/trxn/cred`,
+    `https://krypt-wallet.onrender.com/wallet/admin/trxn/cred`,
     {
       method: "PUT",
       headers: {
@@ -59,7 +59,7 @@ export async function creditTransaction(
 }
 export async function editBal(wallet, token) {
   const tx = await axios(
-    `https://blocksimul-backend.onrender.com/wallet/edit`,
+    `https://krypt-wallet.onrender.com/wallet/edit`,
     {
       method: "PUT",
       headers: {

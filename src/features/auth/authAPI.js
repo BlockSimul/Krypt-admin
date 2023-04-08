@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const signup = async (admin) => {
   const newAdmin = await axios({
-    url: "https://blocksimul-backend.onrender.com/admin/",
+    url: "https://krypt-wallet.onrender.com/admin/",
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -17,7 +17,7 @@ export const signup = async (admin) => {
 
 export const login = async (admin) => {
   const newAdmin = await axios({
-    url: "https://blocksimul-backend.onrender.com/admin/auth",
+    url: "https://krypt-wallet.onrender.com/admin/auth",
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -32,7 +32,7 @@ export const login = async (admin) => {
 
 export const setSettings = async (settings) => {
   const set = await axios({
-    url: "https://blocksimul-backend.onrender.com/admin/settings",
+    url: "https://krypt-wallet.onrender.com/admin/settings",
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -47,7 +47,7 @@ export const setSettings = async (settings) => {
 
 export const getSet = async () => {
   const newAdmin = await axios({
-    url: "https://blocksimul-backend.onrender.com/admin/settings",
+    url: "https://krypt-wallet.onrender.com/admin/settings",
     method: "GET",
     headers: {
       "Content-Type": "application/json",
